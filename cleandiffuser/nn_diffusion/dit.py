@@ -364,7 +364,7 @@ class DiT1dWithACICrossAttention(DiT1d):
         t: torch.Tensor,
         condition: Dict[str, torch.Tensor] = None,
     ):
-        vec_condition = condition.get("vec_condition", 0)
+        vec_condition = condition.get("vec_condition", None)
         vis_condition = condition.get("vis_condition", None)
         vis_condition_mask = condition.get("vis_condition_mask", None)
         lang_condition = condition.get("lang_condition", None)
@@ -425,3 +425,4 @@ if __name__ == "__main__":
             },
         ).shape
     )
+t + y

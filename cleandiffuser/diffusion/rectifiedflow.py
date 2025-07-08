@@ -490,7 +490,7 @@ class ContinuousRectifiedFlow(DiffusionModel):
             t (torch.Tensor): Diffusion timestep.
             eps (torch.Tensor): Noise.
         """
-        t = torch.rand((x0.shape[0],), device=self.device) if t is None else t
+        t = torch.rand((x0.shape[0],), device=x0.device) if t is None else t
         eps = torch.randn_like(x0) if eps is None else eps
 
         xt = x0 + at_least_ndim(t, x0.dim()) * (eps - x0)
