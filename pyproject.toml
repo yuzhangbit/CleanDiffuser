@@ -7,7 +7,7 @@ readme = "README.md"
 requires-python = ">= 3.8"
 keywords = ["reinforcement learning", "pytorch", "diffusion models"]
 dependencies = [
-    "numpy<1.23.0",
+    "numpy<=1.26.0",
     "einops",
     "mujoco_py>=2.0,<=3.1.6",
     "gym>=0.13,<0.24",
